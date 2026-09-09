@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPT-6 Visual Results</title>
+  <meta name="description" content="Paper2Poster and VBVR visual result pages.">
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #090d14; color: #edf3f8; }
+    main { width: min(920px, calc(100% - 32px)); padding: 48px 0; }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 4rem); letter-spacing: -.055em; }
+    .intro { margin: 0 0 32px; color: #91a0b5; font-size: 1.05rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    a { display: block; padding: 24px; border: 1px solid #293548; border-radius: 14px; color: inherit; background: #101722; text-decoration: none; transition: transform .15s, border-color .15s; }
+    a:hover { transform: translateY(-2px); border-color: #56d9d1; }
+    h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    p { margin: 0; color: #91a0b5; line-height: 1.55; }
+    .count { display: inline-block; margin-top: 18px; color: #56d9d1; font: 700 .8rem ui-monospace, monospace; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>GPT-6 Visual Results</h1>
+    <p class="intro">选择一个结果集查看 Codex 生成结果与 Ground Truth 的对比。</p>
+    <section class="grid">
+      <a href="Paper2Poster/codex_gpt6_no_skill_batch10_generated_posters/">
+        <h2>Paper2Poster</h2>
+        <p>并排或叠加查看生成海报与 Ground Truth。</p>
+        <span class="count">10 CASES</span>
+      </a>
+      <a href="VBVR-codex-hard-results/">
+        <h2>VBVR</h2>
+        <p>查看初始帧、任务提示及生成视频对比。</p>
+        <span class="count">11 CASES</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
