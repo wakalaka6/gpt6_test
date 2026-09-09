@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VBVR · Codex vs Ground Truth</title>
+  <meta name="description" content="VBVR cases: initial frame, prompt, Codex prediction, and ground-truth video.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d14;
+      --panel: #101722;
+      --panel-2: #151e2b;
+      --line: #273244;
+      --text: #ecf2f8;
+      --muted: #94a3b8;
+      --cyan: #55d9d2;
+      --amber: #ffca74;
+      --blue: #74a7ff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 16px clamp(18px, 4vw, 56px);
+      background: rgba(9, 13, 20, .92); border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+    h1 { margin: 0; font-size: clamp(1.25rem, 2vw, 1.7rem); letter-spacing: -.03em; }
+    .summary { color: var(--muted); font-size: .92rem; white-space: nowrap; }
+    main { width: min(1500px, calc(100% - 32px)); margin: 28px auto 64px; }
+    .toolbar { display: flex; gap: 8px; margin-bottom: 18px; }
+    button {
+      border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px;
+      color: var(--text); background: var(--panel-2); cursor: pointer; font: inherit;
+    }
+    button:hover, button[aria-pressed="true"] { border-color: var(--cyan); color: var(--cyan); }
+    #cases { display: grid; gap: 22px; }
+    article { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+    .case-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--panel-2);
+    }
+    .case-title { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+    .index { color: var(--cyan); font: 700 .82rem ui-monospace, SFMono-Regular, Menlo, monospace; }
+    h2 { margin: 0; font-size: 1.04rem; overflow-wrap: anywhere; }
+    .split { flex: none; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+    .context { display: grid; grid-template-columns: 190px 1fr; gap: 18px; padding: 18px; border-bottom: 1px solid var(--line); }
+    .initial { width: 190px; aspect-ratio: 1; object-fit: contain; border-radius: 8px; background: #eef0ed; }
+    .prompt-label, .media-label { margin: 0 0 8px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .prompt { margin: 0; max-width: 100ch; color: #d7e0ea; font-size: 1rem; line-height: 1.62; }
+    .videos { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
+    .video-cell { min-width: 0; padding: 16px; background: var(--panel); }
+    .video-cell:first-child .media-label { color: var(--blue); }
+    .video-cell:last-child .media-label { color: var(--amber); }
+    video { display: block; width: 100%; max-height: 620px; aspect-ratio: 1; object-fit: contain; border-radius: 8px; background: #05080d; }
+    .controls { display: flex; gap: 8px; }
+    .empty { padding: 56px; text-align: center; color: var(--muted); }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; flex-direction: column; gap: 4px; }
+      main { width: min(100% - 20px, 1500px); margin-top: 16px; }
+      .context { grid-template-columns: 100px 1fr; gap: 12px; padding: 12px; }
+      .initial { width: 100px; }
+      .videos { grid-template-columns: 1fr; }
+      .case-head { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VBVR · Codex vs Ground Truth</h1>
+    <div class="summary"><span id="visible-count">11</span> cases · 左侧 Codex / 右侧 GT</div>
+  </header>
+  <main>
+    <nav class="toolbar" aria-label="筛选数据集划分">
+      <button data-filter="all" aria-pressed="true">全部</button>
+      <button data-filter="In-Domain_50" aria-pressed="false">In-Domain</button>
+      <button data-filter="Out-of-Domain_50" aria-pressed="false">Out-of-Domain</button>
+    </nav>
+    <section id="cases" aria-live="polite"></section>
+  </main>
+  <script>
+    const cases = [
+      { id: "case-01", split: "In-Domain_50", title: "Directed graph navigation", prompt: `The scene shows a network of nodes connected by directed edges (edges with arrows indicating direction) with a green starting node, a red ending node, and a blue triangular agent positioned at the green starting node. The agent can only move along edges in the direction they point (from the source node to the target node, cannot move backwards), moving from one node to an adjacent node each step. Move the blue triangular agent from the green starting node to the red ending node along the path with the minimum number of steps.` },
+      { id: "case-02", split: "In-Domain_50", title: "Stable sort", prompt: `The scene contains two types of shapes, each type has three shapes of different sizes arranged randomly. Keep all shapes unchanged in appearance (type, size, and color). Only rearrange their positions: first group the shapes by type, then within each group, sort the shapes from smallest to largest (left to right), and arrange all shapes in a single horizontal line from left to right.` },
+      { id: "case-03", split: "In-Domain_50", title: "Domino chain branch prediction", prompt: `Push START to begin the chain. Both branches will complete successfully as all dominos are properly connected. Show the full chain reaction with all dominos falling.` },
+      { id: "case-04", split: "In-Domain_50", title: "LEGO construction assembly", prompt: `Add this brick to continue the wall construction. Follow the arrow to see where it connects to the existing structure.` },
+      { id: "case-05", split: "In-Domain_50", title: "Sliding puzzle · exactly 5 moves", prompt: `Complete this sliding puzzle. The goal is to arrange the numbered tiles in grid order (filling each row from left to right, with rows from top to bottom), with the empty space at the bottom-right corner. Rules: Only tiles adjacent to the empty space can be moved. Slide one tile per move into the empty space. Complete in exactly 5 moves. Do not make extra moves. Keep the camera view fixed and maintain the grid structure unchanged.` },
+      { id: "case-06", split: "Out-of-Domain_50", title: "15×15 maze", prompt: `The scene contains a 15x15 cell maze of medium complexity, featuring black walls and white pathways. A green circular marker shows the start position, and a red flag shows the end position. From the green start, navigate through the maze by traversing adjacent white cells in four directions (up, down, left, right), keeping clear of black wall cells. Discover and animate the full route from the green start to the red flag end, displaying each cell visited along the solution path.` },
+      { id: "case-07", split: "Out-of-Domain_50", title: "Symmetry completion", prompt: `Complete this pattern by filling in the missing grid cells on the right side. Observe the left half of the pattern and recognize that it should be mirrored to create a symmetric pattern. Fill in the right half by mirroring the left half across the vertical center line. Keep the camera view fixed in the top-down perspective and maintain all existing cells unchanged. Stop the video when the symmetric pattern is fully completed.` },
+      { id: "case-08", split: "Out-of-Domain_50", title: "Control panel threshold", prompt: `Adjust the blue level slider from 62% to 80% upward. When reaching 70%, the state changes immediately and the Activate button turns green.` },
+      { id: "case-09", split: "Out-of-Domain_50", title: "Raven progressive matrix", prompt: `This is Raven's Progressive Matrices like task. Complete the missing pattern in this 3x3 matrix.` },
+      { id: "case-10", split: "Out-of-Domain_50", title: "Gravity physics", prompt: `Given physical parameters: initial height of object 12.7m, initial upward velocity 4.9 m/s, gravitational acceleration 8.3 m/s². Based on this information, simulate and display the complete motion of the object over the next 3 seconds, including trajectory and final position.` },
+      { id: "case-11", split: "Out-of-Domain_50", title: "2D geometric rotation", prompt: `Perform a 2D geometric transformation by rotating the planar object to the target position. You are given: (1) a solid-colored 2D shape in its starting orientation, (2) a clearly marked rotation center point, and (3) a target outline indicating where the shape should end up after rotation. Your task is to rotate the shape in the 2D plane around the specified rotation center until the shape's position precisely aligns with and overlaps the target outline. The object must maintain its size and shape during rotation, only its orientation should change.` }
+    ];
+
+    const container = document.querySelector("#cases");
+    const count = document.querySelector("#visible-count");
+
+    function card(item, index) {
+      const article = document.createElement("article");
+      article.dataset.split = item.split;
+      article.innerHTML = `
+        <div class="case-head">
+          <div class="case-title"><span class="index">${String(index + 1).padStart(2, "0")}</span><h2>${item.title}</h2></div>
+          <span class="split">${item.split.replace("_50", "")}</span>
+        </div>
+        <div class="context">
+          <img class="initial" src="web_media/${item.id}/first_frame.png" alt="${item.title} initial frame" loading="lazy">
+          <div><p class="prompt-label">Prompt</p><p class="prompt"></p></div>
+        </div>
+        <div class="videos">
+          <div class="video-cell">
+            <p class="media-label">Codex prediction</p>
+            <video controls playsinline preload="metadata" src="web_media/${item.id}/codex.mp4"></video>
+          </div>
+          <div class="video-cell">
+            <p class="media-label">Ground truth</p>
+            <video controls playsinline preload="metadata" src="web_media/${item.id}/gt.mp4"></video>
+          </div>
+        </div>
+        <div class="case-head">
+          <div class="controls"><button class="sync">同步播放</button><button class="pause">暂停</button></div>
+        </div>`;
+      article.querySelector(".prompt").textContent = item.prompt;
+      const videos = [...article.querySelectorAll("video")];
+      article.querySelector(".sync").addEventListener("click", async () => {
+        videos.forEach(video => { video.pause(); video.currentTime = 0; });
+        await Promise.allSettled(videos.map(video => video.play()));
+      });
+      article.querySelector(".pause").addEventListener("click", () => videos.forEach(video => video.pause()));
+      return article;
+    }
+
+    cases.forEach((item, index) => container.append(card(item, index)));
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(b => b.setAttribute("aria-pressed", String(b === button)));
+        let visible = 0;
+        document.querySelectorAll("article").forEach(article => {
+          const show = filter === "all" || article.dataset.split === filter;
+          article.hidden = !show;
+          if (show) visible++;
+        });
+        count.textContent = visible;
+      });
+    });
+  </script>
+</body>
+</html>

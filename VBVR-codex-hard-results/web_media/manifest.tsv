@@ -1,0 +1,11 @@
+case-01	In-Domain_50/G-31_directed_graph_navigation_data-generator/00000
+case-02	In-Domain_50/G-3_stable_sort_data-generator/00000
+case-03	In-Domain_50/O-23_domino_chain_branch_path_prediction_data-generator/00000
+case-04	In-Domain_50/O-25_LEGO_construction_assembly_data-generator/00000
+case-05	In-Domain_50/O-47_sliding_puzzle_data-generator/00000
+case-06	Out-of-Domain_50/O-39_maze_data-generator/00000
+case-07	Out-of-Domain_50/O-49_symmetry_completion_data-generator/00000
+case-08	Out-of-Domain_50/O-54_control_panel_data-generator/00000
+case-09	Out-of-Domain_50/O-56_raven_data-generator/00000
+case-10	Out-of-Domain_50/O-62_gravity_physics_data-generator/00000
+case-11	Out-of-Domain_50/O-6_2d_geometric_transformation_data-generator/00000
