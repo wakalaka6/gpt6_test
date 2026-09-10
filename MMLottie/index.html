@@ -18,14 +18,14 @@
 </head>
 <body id="top">
   <header>
-    <div class="eyebrow">MMLottie · Qualitative Results</div>
+    <div class="eyebrow">MMLottie · 定性结果</div>
     <h1>GPT-6 Astra 动画生成结果</h1>
-    <p class="intro">合并论文展示样例与 MMLottie Bench 测试结果。每个样例直接展示原始 prompt；有参考图或 GT 视频时，与生成结果并排展示。</p>
+    <p class="intro">合并论文展示样例与 MMLottie 基准测试结果。每个样例展示完整中文提示词；有参考图或真实视频时，与生成结果并排展示。</p>
     <div class="stats"><span><strong>39</strong> 个样例</span><span><strong>14</strong> 文本生成</span><span><strong>14</strong> 图文生成</span><span><strong>11</strong> 视频重建</span><span class="model"><i class="dot"></i><strong>GPT-6 Astra</strong> 39/39</span></div>
   </header>
   <nav class="bar"><div class="bar-inner"><span class="bar-label">任务类型</span><div class="filters"><button class="active" data-filter="all">全部</button><button data-filter="text2lottie">文本生成</button><button data-filter="text_image2lottie">图文生成</button><button data-filter="video2lottie">视频重建</button></div><span class="count" id="count"></span></div></nav>
   <main id="results"></main>
-  <footer><span>MMLottie Bench</span><a href="#top">返回顶部 ↑</a></footer>
+  <footer><span>MMLottie 基准测试</span><a href="#top">返回顶部 ↑</a></footer>
   <script>
     const rows=[
       ['01_figure4_01','text2lottie','一个风格化显示器图标逐渐出现：白色屏幕、紫色底座和黑色轮廓。'],
@@ -52,6 +52,47 @@
       ['01_090a20b6e2d329f516e1fa9cb2e8526d','video2lottie',''],['02_f2c4c10da8fd5d1b82d177a5fd25927e','video2lottie',''],['03_c91653319b5537435a40dfe5dd8ba149','video2lottie',''],['04_24a78bb5babaebd6bda422042d090711','video2lottie',''],['05_39e8a8a5d4e4a744ba39e41589677a1a','video2lottie','']
     ];
     const names={text2lottie:'文本生成动画',text_image2lottie:'图文生成动画',video2lottie:'视频重建动画'};
+    const promptZh={
+      '01_figure4_01':'一个风格化的显示器图标逐渐出现，其中包含白色显示区域、紫色底座和黑色轮廓。',
+      '02_figure4_02':'一个浅灰色矩形文档图标轮廓出现，一支黑色铅笔图标从右侧滑入画面。',
+      '03_figure4_03':'一个带黑色轮廓的黄色圆形表情，其眼睛从左向右移动。',
+      '04_figure4_04':'一面安装在黄色旗杆上的方格旗轻微飘动。',
+      '05_figure4_05':'画面展示一个黑白雪球，里面有一棵卡通风格的圣诞树，雪花在周围飞舞。',
+      '06_figure4_06':'一个风格化的蓝色房屋图标，带有小型黑色烟囱和三扇深色方形窗户；一把橙色手柄的白色刷子刷出竖直线条。',
+      '07_figure4_07':'一个蓝色圆角矩形中包含一只猫，猫逐渐出现并挥手。',
+      '08_figure4_08':'画面展示一个卡通头像：整齐的棕色短发、黄色脸庞、小耳朵，以及露出白色牙齿的灿烂笑容。',
+      '09_figure4_09':'一只蓝色小鸟出现，一边脉动一边向下滑动，随后短暂停留。',
+      '01_7d16c88e5c1660145fdfcc86a9c76f77':'初始帧显示一个带勾选标记的红色盾牌，以及一张带红色印度卢比货币符号的红色纸币，两者均以红色描边。盾牌位于左侧，纸币占据画面中央区域。右侧有一把同样以红色描边的红色挂锁。所有元素静止在白色背景上。\n\n第二帧与第一帧相比没有可辨别的变化或运动；相同元素仍保持在各自原来的位置，维持静态排列。\n\n第三帧与第二帧相同：带勾选标记的盾牌、带卢比符号的纸币和挂锁等红色元素，在白色背景上的位置和外观均保持不变，继续呈现静态画面。',
+      '02_5c63cdee232eb860d7ca31381d267f7f':'在白色背景上，三条黄色弧线旋转到位，组成一个黄色圆环。圆环内部有一个类似辐射危险标志的深灰色三角符号缓慢旋转，形成持续运动的感觉。在整个序列中，黄色圆环保持静止并环绕着旋转的三角符号。',
+      '03_795400a7689e29389782c7acf9c38618':'初始帧为白色背景，上面有一个黑色文件夹图标轮廓。文件夹内部有一个较小的黑色圆形，其中包含一个抽象的人形表示，同样使用黑色轮廓。\n\n各帧之间没有明显的运动或过渡；每一帧都保持静止，并且在视觉上与前一帧相同。\n\n最终帧保持与初始帧相同的构图，黑色文件夹图标和用户头像符号始终显示在白色背景上。',
+      '04_af0524433f4ce3cd334fbc3433b9b537':'一个带卷角的浅灰色矩形文档图标轮廓出现。随着时间推移，轮廓转变为实心黑色形状，内部被填满，形成更加明确的文档图标。随后，文档内部出现黑色水平线，用来模拟文字。最后，一支黑色铅笔图标从右侧滑入，斜放在文档右下区域，表现书写或编辑动作。',
+      '05_56de7180d77cf1e1036d24a5d4e1196b':'一个极简动画：带黑色轮廓的门位于白色背景中央，门上有一扇矩形窗户和一个小圆形把手。一个带白色比特币符号“₿”的蓝色圆形从门后出现，并向画面左侧水平移动，最终完全滑出。动画采用平滑的滑动运动，不包含淡入淡出或模糊等其他效果。',
+      '01_8a28d667120d09f048870736a45e405c':'视频开始时出现一个风格化的二维沙漏图标，主体为浅黄色并带黑色轮廓。上半球中的沙子以深棕色填充表示，其位置略微偏离中心，以体现运动。沙漏周围带有浅灰色阴影，在白色背景上增加层次感。\n\n随着序列推进，沙漏平滑旋转并逐渐达到竖直状态。旋转过程中，沙子仿佛在内部流动和移动，强调时间的流逝。图形同时发生变化，整个设计被纯黄色填满，使其更加醒目并呈现大胆的视觉效果。黑色轮廓始终保持一致，为图形提供结构。\n\n序列结束时，沙漏完全竖直，并保持纯黄色填充和黑色轮廓。内部沙子已经沉积到下半球，形成一个三角形，表示计时过程完成。整个变化平滑完成，没有引入其他效果或元素。',
+      '02_29e9aa253625a744c9e962f6921e708b':'视频从一条短小的蓝色水平线开始，该线逐渐延伸成一个较大的矩形框。随后，框内显示投影内容：左上角是绿色和黄色的饼图，右侧是由蓝色、绿色和黄色不同高度柱形组成的柱状图，并包含若干灰色占位文本框。整个画面采用干净的极简设计和白色背景，投影屏幕的顶部与底部由深蓝色圆角边框包围。',
+      '03_801af63abba999888411dd580699fd0c':'视频从空白的白色背景开始。一个带圆角的浅灰色矩形盒子出现，表示 ATM 机机身。盒子顶部有一条颜色稍深的灰色水平条，作为插卡槽。\n\n随着画面推进，一个中央带深蓝色条纹的浅青色竖直矩形从 ATM 机底部向下滑出，表示正在插入银行卡。卡片继续向下移动，直至停在 ATM 卡槽下方。\n\n最后，一个尖端带白色圆形的红色位置标记出现在银行卡正下方，表示地理定位功能。至此视觉叙事完成，突出支付服务与地理位置服务的结合。',
+      '04_5dac6e2aebc3f5119526949aba9f4f0f':'视频开始时，白色纯色背景中央出现一只蝴蝶的黑色轮廓，两侧翅膀上带有精细的翅脉图案。蝴蝶身体造型简洁，两根触角向外伸展。\n\n随着视频推进，蝴蝶图像分三个明显阶段逐渐变暗。每一帧都从较浅的灰色过渡到更深的灰色，同时始终保持相同的形状和设计。\n\n序列结束时，整只蝴蝶已经变为纯深灰色或接近黑色；在始终一致的白色背景上，翅脉的精细细节仍然清晰可见。',
+      '05_8b2ae4365e4ff8f1b34f7aca0fa2ee7d':'视频展示一个动态动画：蓝色矩形标牌中央写有白色文字“41%”。起初，标牌略显模糊，顶部两个角各有一个小型圆角凸起。随着视频推进，标牌逐渐变得清晰，两个凸起消失，整体设计稳定为边缘清楚、文字锐利的纯蓝色矩形。整个序列始终使用白色背景，以突出标牌外观的变化。',
+      '06_724531a5e6b90b1034c172d6bafecb55':'视频展示一个简单动画：一只手托着一枚带黑色美元符号“$”的大型黄色硬币。手采用浅肤色，配有蓝色袖子和黑色袖口，并轻微移动，使硬币原地旋转，模拟翻转动作。硬币的旋转平滑且连续，中央美元符号始终清晰可见。背景始终为白色，确保视觉焦点集中在手与硬币的互动上。',
+      '07_583eeb3f9ef19dc26e2c40b361c2534c':'起初，纯白色背景中央有一个小型浅粉色字母“O”。\n\n字母“O”逐渐放大，占据更多空间，同时保持粉色。与此同时，一朵带粉色花心和绿色叶片的红花开始出现，并附着在“O”的左上区域。\n\n最后，“O”保持为大型鲜艳粉色字母，并完整装饰有由红花、粉色花心和绿色叶片构成的精细花卉图案，形成和谐而富有装饰性的最终画面。',
+      '08_6caf31b7ea63dd69d73be8eb53552f02':'一幅静态插图展示一个卡通风格的厨师角色：他戴着白色厨师帽、穿着白色厨师服，站在纯白色背景前。厨师手持一个大型鲜红色聊天气泡图标，气泡内有三个白点，并突出显示在前景中。厨师右手握住聊天气泡，左手向外伸展，仿佛正在展示它。各帧中没有可见的动画、运动或过渡；整个序列始终保持相同构图。',
+      '09_4e35621554c119e1b491c72f0892d52d':'视频展示一个位于白色背景中央的蓝色聊天气泡图标。起初，聊天气泡只有一部分填充浅蓝色，随后逐渐被纯蓝色完全填满。气泡内部出现三个白色小圆点，并通过轻微的水平往复移动形成动画；三个圆点在整个序列中始终可见。',
+      '01_5b369fed548824246e2282fa4c3daf0a':'场景从以白色为主的背景开始，左下角附近出现一个火箭形状的淡红色轮廓。\n\n红色轮廓逐渐填充并变得更加清晰，同时增加火箭主体、尾翼和圆形舷窗等细节，整个过程中始终保持一致的红色。\n\n最后，火箭图标完整成形并位于白色背景中央，不再发生其他变化或效果。',
+      '02_5a6a50ea945d49fe285919ccc667fc6e':'视频在白色背景上展示一个灰色圆形进度条。进度条中的深灰色填充部分沿圆周平滑地顺时针旋转，表示持续运动。填充部分在各帧中逐步推进，动画风格平滑且一致，没有突然变化，也没有添加其他元素。',
+      '03_a89c5b7f9cd2895a35aa4f5db5e28b59':'开始时，视频显示白色背景和一根大型红色矩形柱，柱顶带有向上的三角箭头。该柱位于画面底部附近的中央。\n\n随着序列推进，原始柱体左侧又出现两根红色矩形柱，每一根都比前一根更矮。这些柱体保持竖直排列，顶部都带有相同的向上三角箭头。它们依次从右向左滑入，并保持相等间距。\n\n最终状态中，三根红色矩形柱从左到右水平排列，高度依次增加，最右侧柱体最高。每根柱体都使用一致的红色填充和描边，顶部带三角箭头，共同形成上升趋势的视觉表示。',
+      '04_6b38b3bf3232eb368236a3f00e467a29':'视频从白色背景开始，一个部分卷起的红色文档从画面底部出现。文档内部，一个带绿色勾选标记的蓝色挂锁图标逐渐淡入并完全可见。文档保持居中，蓝色挂锁图标播放动画，传达完成或安全的感觉。文档下方始终有一个浅蓝色圆形阴影，以增加层次感。整个序列结束时，文档、挂锁图标和阴影静止保留在画面中。',
+      '05_64d613c029dd192ddeb8670715fa2fc6':'视频开始时，一个紫色圆点竖直向上移动，朝向绿色矩形框。圆点到达框的顶部后变成紫色箭头，并从右向左水平滑过矩形框。绿色边框在整个序列中保持静止，作为运动范围的边界。背景始终为白色，没有其他视觉杂项，确保注意力集中在主要元素的移动和形态变化上。',
+      '01_7bfb8dbd60c6ff28142618bbf4203906':'将提供的视频重建为 Lottie 动画。',
+      '02_6d5cbe4b8133b479657ca24210966711':'将提供的视频重建为 Lottie 动画。',
+      '03_adc3f1bd5c3856749b261bd0467aa565':'将提供的视频重建为 Lottie 动画。',
+      '04_53239df6c0996830f2dc048bc974cc92':'将提供的视频重建为 Lottie 动画。',
+      '05_18014d1baa8dfa4d1b3686113183826d':'将提供的视频重建为 Lottie 动画。',
+      '06_a1090da13d756edc9f1807740da8ac3e':'将提供的视频重建为 Lottie 动画。',
+      '01_090a20b6e2d329f516e1fa9cb2e8526d':'该样例的原始提示词为空。',
+      '02_f2c4c10da8fd5d1b82d177a5fd25927e':'该样例的原始提示词为空。',
+      '03_c91653319b5537435a40dfe5dd8ba149':'该样例的原始提示词为空。',
+      '04_24a78bb5babaebd6bda422042d090711':'该样例的原始提示词为空。',
+      '05_39e8a8a5d4e4a744ba39e41589677a1a':'该样例的原始提示词为空。'
+    };
     const card=(label,html,extra='')=>`<figure class="card ${extra}"><figcaption class="label">${label}</figcaption>${html}</figure>`;
     function render(filter='all'){
       const shown=rows.filter(r=>filter==='all'||r[1]===filter);
@@ -59,21 +100,12 @@
       document.querySelector('#results').innerHTML=shown.map((r,i)=>{
         const [id,task]=r, base=`./${task}/${id}`, input=base;
         const ref=task==='text_image2lottie'?card('参考图',`<div class="stage"><img loading="lazy" src="${input}/input.png" alt="${id} 参考图"></div>`):'';
-        const gt=task==='video2lottie'?card('GT 视频',`<div class="stage"><video src="${input}/input.mp4" muted loop autoplay playsinline controls preload="metadata"></video></div>`):'';
+        const gt=task==='video2lottie'?card('真实视频',`<div class="stage"><video src="${input}/input.mp4" muted loop autoplay playsinline controls preload="metadata"></video></div>`):'';
         const result=card('GPT-6 Astra',`<div class="stage"><video src="${base}/result.mp4" muted loop autoplay playsinline controls preload="metadata"></video></div>`);
-        const headline=`<p class="headline-text" data-prompt-src="${input}/prompt.txt">正在载入原始 prompt…</p>`;
+        const headline=`<p class="headline-text">${promptZh[id]}</p>`;
         const columns=task==='text2lottie'?'one':'two';
         return `<article class="sample"><div class="sample-head"><div><span class="num">${String(i+1).padStart(2,'0')}</span><span class="badge">${names[task]}</span></div><code>${id}</code></div>${headline}<div class="grid ${columns}">${ref}${gt}${result}</div></article>`;
       }).join('');
-      document.querySelectorAll('[data-prompt-src]').forEach(async el=>{
-        try{
-          const response=await fetch(el.dataset.promptSrc);
-          if(!response.ok) throw new Error(String(response.status));
-          el.textContent=(await response.text()).trim();
-        }catch(error){
-          el.textContent='原始 prompt 加载失败，请通过 HTTP 服务打开本页面。';
-        }
-      });
     }
     document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.filters .active').classList.remove('active');b.classList.add('active');render(b.dataset.filter)}));
     render();

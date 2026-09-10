@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Code2Video · GPT-6 Astra 对比</title>
+  <title>代码生成视频 · GPT-6 Astra 对比</title>
   <style>
     :root{--page:#f4f5f6;--paper:#fff;--ink:#181a1d;--muted:#70757c;--line:#d8dadd;--soft:#eceef0;--blue:#315ea8}
     *{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--page);color:var(--ink);font:16px/1.45 Arial,Helvetica,sans-serif}
@@ -27,8 +27,8 @@
 </head>
 <body>
   <header>
-    <div><p class="eyebrow">MMMC BENCHMARK</p><h1>Code to Video Generation</h1></div>
-    <div class="summary"><strong>10 paired results</strong>Ground truth · GPT-6 Astra</div>
+    <div><p class="eyebrow">MMMC 基准测试</p><h1>代码生成视频</h1></div>
+    <div class="summary"><strong>10 组配对结果</strong>真实视频 · GPT-6 Astra</div>
   </header>
   <main>
     <div class="controls"><input id="search" type="search" placeholder="查找编号或主题"><span class="count" id="count">10 / 10</span></div>
@@ -37,20 +37,20 @@
   <script>
     const base='https://huggingface.co/datasets/YanzheChen/MMMC/resolve/main/';
     const cases=[
-      ['001',"Moser's circle problem",'data/Puzzles/This pattern breaks, but for a good reason ｜ Moser\'s circle problem/This pattern breaks, but for a good reason ｜ Moser\'s circle problem.mp4'],
-      ['002','Basics of linear algebra and vectors','data/Linear Algebra/Vectors ｜ Chapter 1, Essence of linear algebra/Vectors ｜ Chapter 1, Essence of linear algebra.mp4'],
-      ['003','Space-filling curves and the relationship between infinite and finite mathematics','data/Topology/Hilbert\'s Curve： Is infinite math useful？/Hilbert\'s Curve： Is infinite math useful？.mp4'],
-      ['004','Origin and color dependence of the index of refraction','data/Physics/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index.mp4'],
-      ['005','Topology','data/Topology/Who cares about topology？   (Old version)/Who cares about topology？   (Old version).mp4'],
-      ['006','Holomorphic dynamics and iterated complex functions','data/Analysis/Beyond the Mandelbrot set, an intro to holomorphic dynamics/Beyond the Mandelbrot set, an intro to holomorphic dynamics.mp4'],
-      ['007','Numerical algorithms for solving 2D equations, winding numbers, and domain coloring','data/Analysis/Winding numbers and domain coloring/Winding numbers and domain coloring.mp4'],
-      ['008','Geometric interpretation of linear systems, inverse matrices, column space, and null space','data/Linear Algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra.mp4'],
-      ['009','Change of basis','data/Linear Algebra/Change of basis ｜ Chapter 13, Essence of linear algebra/Change of basis ｜ Chapter 13, Essence of linear algebra.mp4'],
-      ['010','Cross products in 2D and 3D','data/Geometry/Cross products ｜ Chapter 10, Essence of linear algebra/Cross products ｜ Chapter 10, Essence of linear algebra.mp4']
+      ['001','莫泽圆问题','data/Puzzles/This pattern breaks, but for a good reason ｜ Moser\'s circle problem/This pattern breaks, but for a good reason ｜ Moser\'s circle problem.mp4'],
+      ['002','线性代数与向量基础','data/Linear Algebra/Vectors ｜ Chapter 1, Essence of linear algebra/Vectors ｜ Chapter 1, Essence of linear algebra.mp4'],
+      ['003','空间填充曲线以及无限数学与有限数学的关系','data/Topology/Hilbert\'s Curve： Is infinite math useful？/Hilbert\'s Curve： Is infinite math useful？.mp4'],
+      ['004','折射率的起源及其与颜色的关系','data/Physics/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index.mp4'],
+      ['005','拓扑学','data/Topology/Who cares about topology？   (Old version)/Who cares about topology？   (Old version).mp4'],
+      ['006','全纯动力系统与复函数迭代','data/Analysis/Beyond the Mandelbrot set, an intro to holomorphic dynamics/Beyond the Mandelbrot set, an intro to holomorphic dynamics.mp4'],
+      ['007','求解二维方程的数值算法、绕数与域着色','data/Analysis/Winding numbers and domain coloring/Winding numbers and domain coloring.mp4'],
+      ['008','线性方程组、逆矩阵、列空间与零空间的几何解释','data/Linear Algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra.mp4'],
+      ['009','基变换','data/Linear Algebra/Change of basis ｜ Chapter 13, Essence of linear algebra/Change of basis ｜ Chapter 13, Essence of linear algebra.mp4'],
+      ['010','二维与三维中的叉积','data/Geometry/Cross products ｜ Chapter 10, Essence of linear algebra/Cross products ｜ Chapter 10, Essence of linear algebra.mp4']
     ];
     const samples=document.querySelector('#samples'),search=document.querySelector('#search'),count=document.querySelector('#count'),empty=document.querySelector('#empty');
     const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    function render(){const q=search.value.trim().toLowerCase();const shown=cases.filter(x=>x[0].includes(q)||x[1].toLowerCase().includes(q));count.textContent=`${shown.length} / ${cases.length}`;empty.style.display=shown.length?'none':'block';samples.innerHTML=shown.map(([id,title,path])=>`<article class="sample"><div class="sample-head"><span class="id">CASE ${id}</span><h2>${escape(title)}</h2><button class="sync" type="button">同步播放</button></div><div class="grid"><div class="card"><div class="label">Ground truth <small>MMMC</small></div><video controls preload="metadata" src="${encodeURI(base+path)}"></video></div><div class="card"><div class="label">Generated <small>GPT-6 Astra</small></div><video controls preload="metadata" src="generated/${id}.mp4"></video></div></div></article>`).join('');document.querySelectorAll('.sync').forEach(btn=>btn.onclick=()=>{const vs=[...btn.closest('.sample').querySelectorAll('video')];if(vs.some(v=>v.paused)){vs.forEach(v=>v.play())}else{vs.forEach(v=>v.pause())}})}
+    function render(){const q=search.value.trim().toLowerCase();const shown=cases.filter(x=>x[0].includes(q)||x[1].toLowerCase().includes(q));count.textContent=`${shown.length} / ${cases.length}`;empty.style.display=shown.length?'none':'block';samples.innerHTML=shown.map(([id,title,path])=>`<article class="sample"><div class="sample-head"><span class="id">样例 ${id}</span><h2>${escape(title)}</h2><button class="sync" type="button">同步播放</button></div><div class="grid"><div class="card"><div class="label">真实视频 <small>MMMC</small></div><video controls preload="metadata" src="${encodeURI(base+path)}"></video></div><div class="card"><div class="label">生成结果 <small>GPT-6 Astra</small></div><video controls preload="metadata" src="generated/${id}.mp4"></video></div></div></article>`).join('');document.querySelectorAll('.sync').forEach(btn=>btn.onclick=()=>{const vs=[...btn.closest('.sample').querySelectorAll('video')];if(vs.some(v=>v.paused)){vs.forEach(v=>v.play())}else{vs.forEach(v=>v.pause())}})}
     search.addEventListener('input',render);render();
   </script>
 </body>
