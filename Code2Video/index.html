@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Code2Video · GPT-6 Astra 对比</title>
+  <style>
+    :root{--page:#f4f5f6;--paper:#fff;--ink:#181a1d;--muted:#70757c;--line:#d8dadd;--soft:#eceef0;--blue:#315ea8}
+    *{box-sizing:border-box}body{margin:0;min-width:320px;background:var(--page);color:var(--ink);font:16px/1.45 Arial,Helvetica,sans-serif}
+    header{display:flex;align-items:end;justify-content:space-between;gap:2rem;max-width:1560px;margin:auto;padding:1.8rem 1.5rem 1.1rem}
+    .eyebrow{margin:0 0 .3rem;color:var(--muted);font-size:.75rem;font-weight:700;letter-spacing:.14em}
+    h1{margin:0;font:clamp(2rem,3.2vw,3.25rem)/1 Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+    .summary{color:var(--muted);font-size:.82rem;text-align:right}.summary strong{display:block;color:var(--ink);font-size:1.05rem}
+    main{max-width:1560px;margin:0 auto 3rem;background:var(--paper);border:1px solid var(--soft);box-shadow:0 2px 12px #161c2214}
+    .controls{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border-bottom:1px solid var(--soft)}
+    input{width:min(28rem,60vw);min-height:2.3rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:.2rem;font:inherit}
+    .count{margin-left:auto;color:var(--muted);font-size:.8rem}.samples{padding:0 1rem}.sample{padding:.8rem 0 1rem;border-bottom:1px solid var(--line)}
+    .sample:last-child{border-bottom:0}.sample-head{display:flex;align-items:baseline;gap:.8rem;padding:0 .25rem .55rem}
+    .id{color:var(--blue);font:700 .75rem/1 ui-monospace,monospace;letter-spacing:.05em}.sample h2{margin:0;font-size:.92rem;font-weight:600}
+    .sync{margin-left:auto;padding:.35rem .65rem;border:1px solid var(--line);background:#fff;cursor:pointer}.sync:hover{border-color:#777}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-width:0;padding:.4rem .75rem}.card:first-child{border-right:1px dashed #b8bbc0}
+    .label{padding:0 0 .4rem;font-size:.84rem;font-weight:700;text-align:center}.label small{margin-left:.4rem;color:var(--muted);font-weight:400}
+    video{display:block;width:100%;aspect-ratio:16/9;background:#111;object-fit:contain}.error{padding:.5rem;color:#a33;font-size:.75rem;text-align:center}
+    .empty{display:none;padding:3rem;color:var(--muted);text-align:center}
+    @media(max-width:760px){header{align-items:flex-start;flex-direction:column;gap:.8rem;padding:1.1rem .9rem}.summary{text-align:left}main{margin:0;border-inline:0}.controls,.samples{padding-inline:.9rem}.grid{grid-template-columns:1fr;gap:.6rem}.card{padding:.35rem 0}.card:first-child{border-right:0}.sample-head{align-items:flex-start;flex-wrap:wrap}.sync{margin-left:0}h1{font-size:2.2rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">MMMC BENCHMARK</p><h1>Code to Video Generation</h1></div>
+    <div class="summary"><strong>10 paired results</strong>Ground truth · GPT-6 Astra</div>
+  </header>
+  <main>
+    <div class="controls"><input id="search" type="search" placeholder="查找编号或主题"><span class="count" id="count">10 / 10</span></div>
+    <section class="samples" id="samples"></section><p class="empty" id="empty">没有匹配结果</p>
+  </main>
+  <script>
+    const base='https://huggingface.co/datasets/YanzheChen/MMMC/resolve/main/';
+    const cases=[
+      ['001',"Moser's circle problem",'data/Puzzles/This pattern breaks, but for a good reason ｜ Moser\'s circle problem/This pattern breaks, but for a good reason ｜ Moser\'s circle problem.mp4'],
+      ['002','Basics of linear algebra and vectors','data/Linear Algebra/Vectors ｜ Chapter 1, Essence of linear algebra/Vectors ｜ Chapter 1, Essence of linear algebra.mp4'],
+      ['003','Space-filling curves and the relationship between infinite and finite mathematics','data/Topology/Hilbert\'s Curve： Is infinite math useful？/Hilbert\'s Curve： Is infinite math useful？.mp4'],
+      ['004','Origin and color dependence of the index of refraction','data/Physics/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index/But why would light ＂slow down＂？ ｜ Visualizing Feynman\'s lecture on the refractive index.mp4'],
+      ['005','Topology','data/Topology/Who cares about topology？   (Old version)/Who cares about topology？   (Old version).mp4'],
+      ['006','Holomorphic dynamics and iterated complex functions','data/Analysis/Beyond the Mandelbrot set, an intro to holomorphic dynamics/Beyond the Mandelbrot set, an intro to holomorphic dynamics.mp4'],
+      ['007','Numerical algorithms for solving 2D equations, winding numbers, and domain coloring','data/Analysis/Winding numbers and domain coloring/Winding numbers and domain coloring.mp4'],
+      ['008','Geometric interpretation of linear systems, inverse matrices, column space, and null space','data/Linear Algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra/Inverse matrices, column space and null space ｜ Chapter 7, Essence of linear algebra.mp4'],
+      ['009','Change of basis','data/Linear Algebra/Change of basis ｜ Chapter 13, Essence of linear algebra/Change of basis ｜ Chapter 13, Essence of linear algebra.mp4'],
+      ['010','Cross products in 2D and 3D','data/Geometry/Cross products ｜ Chapter 10, Essence of linear algebra/Cross products ｜ Chapter 10, Essence of linear algebra.mp4']
+    ];
+    const samples=document.querySelector('#samples'),search=document.querySelector('#search'),count=document.querySelector('#count'),empty=document.querySelector('#empty');
+    const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function render(){const q=search.value.trim().toLowerCase();const shown=cases.filter(x=>x[0].includes(q)||x[1].toLowerCase().includes(q));count.textContent=`${shown.length} / ${cases.length}`;empty.style.display=shown.length?'none':'block';samples.innerHTML=shown.map(([id,title,path])=>`<article class="sample"><div class="sample-head"><span class="id">CASE ${id}</span><h2>${escape(title)}</h2><button class="sync" type="button">同步播放</button></div><div class="grid"><div class="card"><div class="label">Ground truth <small>MMMC</small></div><video controls preload="metadata" src="${encodeURI(base+path)}"></video></div><div class="card"><div class="label">Generated <small>GPT-6 Astra</small></div><video controls preload="metadata" src="generated/${id}.mp4"></video></div></div></article>`).join('');document.querySelectorAll('.sync').forEach(btn=>btn.onclick=()=>{const vs=[...btn.closest('.sample').querySelectorAll('video')];if(vs.some(v=>v.paused)){vs.forEach(v=>v.play())}else{vs.forEach(v=>v.pause())}})}
+    search.addEventListener('input',render);render();
+  </script>
+</body>
+</html>
