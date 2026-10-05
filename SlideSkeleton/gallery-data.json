@@ -1,0 +1,392 @@
+[
+  {
+    "id": "01",
+    "style": "大胆撞色",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 24,
+        "source": "Multicolored Geometric Modern Pitch Deck Video Business Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "01/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "01/generated/overview.png",
+        "pages": 24,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 24,
+        "source": "补齐原稿字体后渲染 · Multicolored Geometric Modern Pitch Deck Video Business Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "01/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "01/content_codex/overview.png",
+        "pages": 24,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "02",
+    "style": "未来科技",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 34,
+        "source": "Black and Blue Tech Theme for Career Day Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "02/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "02/generated/overview.png",
+        "pages": 34,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 34,
+        "source": "补齐原稿字体后渲染 · Black and Blue Tech Theme for Career Day Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "02/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "02/content_codex/overview.png",
+        "pages": 34,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "03",
+    "style": "蓝白商务",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 21,
+        "source": "Blue and White Simple Basic Company Roadmap Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "03/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "03/generated/overview.png",
+        "pages": 21,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 21,
+        "source": "补齐原稿字体后渲染 · Blue and White Simple Basic Company Roadmap Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "03/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "03/content_codex/overview.png",
+        "pages": 21,
+        "source": "gpt-6-astra · 同页图文、复杂图标及装饰素材"
+      }
+    ],
+    "material_note": "已补齐复杂图标和装饰素材"
+  },
+  {
+    "id": "04",
+    "style": "粉色极简",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 23,
+        "source": "Pink and Gray Modern Minimalistic Aesthetic Beauty Vlogger CV Marketing Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "04/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "04/generated/overview.png",
+        "pages": 23,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 23,
+        "source": "补齐原稿字体后渲染 · Pink and Gray Modern Minimalistic Aesthetic Beauty Vlogger CV Marketing Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "04/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "04/content_codex/overview.png",
+        "pages": 23,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "05",
+    "style": "黑白极简",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 25,
+        "source": "Black And White Minimal Architecture Portfolio Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "05/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "05/generated/overview.png",
+        "pages": 25,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 25,
+        "source": "补齐原稿字体后渲染 · Black And White Minimal Architecture Portfolio Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "05/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "05/content_codex/overview.png",
+        "pages": 25,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "06",
+    "style": "霓虹复古",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 17,
+        "source": "Retro Posting Signs Newsletter ",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "06/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "06/generated/overview.png",
+        "pages": 17,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 17,
+        "source": "补齐原稿字体后渲染 · Retro Posting Signs Newsletter ",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "06/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "06/content_codex/overview.png",
+        "pages": 17,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "07",
+    "style": "自然植物",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 28,
+        "source": "Floral Drawings Slides · SlidesCarnival",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "07/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "07/generated/overview.png",
+        "pages": 28,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 28,
+        "source": "补齐原稿字体后渲染 · Floral Drawings Slides · SlidesCarnival",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "07/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "07/content_codex/overview.png",
+        "pages": 28,
+        "source": "gpt-6-astra · 同页图文、复杂图标及装饰素材"
+      }
+    ],
+    "material_note": "已补齐复杂图标和装饰素材"
+  },
+  {
+    "id": "08",
+    "style": "可爱手绘",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 28,
+        "source": "Red Blue and Yellow Cute Simple Illustrative Doodles Introducing Myself Creative Presentation · SlidesCarnival",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "08/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "08/generated/overview.png",
+        "pages": 28,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 28,
+        "source": "补齐原稿字体后渲染 · Red Blue and Yellow Cute Simple Illustrative Doodles Introducing Myself Creative Presentation · SlidesCarnival",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "08/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "08/content_codex/overview.png",
+        "pages": 28,
+        "source": "gpt-6-astra · 同页图文、复杂图标及装饰素材"
+      }
+    ],
+    "material_note": "已补齐复杂图标和装饰素材"
+  },
+  {
+    "id": "09",
+    "style": "金色优雅",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 22,
+        "source": "Gold Elegant Branding Kit Presentation",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "09/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "09/generated/overview.png",
+        "pages": 22,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 22,
+        "source": "补齐原稿字体后渲染 · Gold Elegant Branding Kit Presentation",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "09/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "09/content_codex/overview.png",
+        "pages": 22,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  },
+  {
+    "id": "10",
+    "style": "几何抽象",
+    "decks": [
+      {
+        "kind": "human",
+        "pages": 17,
+        "source": "Geometric History of Graphic Design Slides",
+        "label": "Human · 骨架",
+        "variant": "skeleton",
+        "image": "10/human/overview.png"
+      },
+      {
+        "label": "AI · 骨架",
+        "kind": "codex",
+        "variant": "skeleton",
+        "image": "10/generated/overview.png",
+        "pages": 17,
+        "source": "gpt-6-astra"
+      },
+      {
+        "kind": "human",
+        "pages": 17,
+        "source": "补齐原稿字体后渲染 · Geometric History of Graphic Design Slides",
+        "label": "Human · 原图",
+        "variant": "original",
+        "image": "10/human/original_overview.png"
+      },
+      {
+        "label": "AI · 给定素材生成",
+        "kind": "codex",
+        "variant": "generated",
+        "image": "10/content_codex/overview.png",
+        "pages": 17,
+        "source": "gpt-6-astra · 同页文字、已提取图片与风格"
+      }
+    ],
+    "material_note": "原有文字、图片与风格输入"
+  }
+]
