@@ -1,0 +1,14 @@
+{
+  "description": "Minimal black and white architecture aesthetic, strong typographic hierarchy.",
+  "palette": [
+    "000000",
+    "FFFFFF",
+    "FF1616",
+    "FFFFFC",
+    "7ED8FD",
+    "00C282"
+  ],
+  "font_families": [
+    "Open Sans"
+  ]
+}

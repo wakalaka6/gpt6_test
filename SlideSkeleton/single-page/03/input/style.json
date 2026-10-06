@@ -1,0 +1,18 @@
+{
+  "description": "White and blue business presentation, restrained accents and clear typography.",
+  "palette": [
+    "0C48BB",
+    "FFFFFF",
+    "000000",
+    "B4E3EF",
+    "F6F6F6",
+    "486FB6",
+    "D8D8D8",
+    "B5BBBF"
+  ],
+  "font_families": [
+    "Assistant",
+    "Tenor Sans",
+    "Roboto"
+  ]
+}

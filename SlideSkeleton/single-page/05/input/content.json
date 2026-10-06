@@ -1,0 +1,92 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "Architecture portfolio",
+        "Elaborate on a personal detail you want to share. Elaborate on a personal detail you want to share. Elaborate on a personal detail you want to share.",
+        "NAME LASTNAME",
+        "PORTFOLIO\nYEAR"
+      ],
+      "images": [
+        "assets/dfd01a6f47547b89.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "Fun Facts About Me",
+        "N  E  X  T",
+        "What makes you unique and interesting? Write them here!",
+        "What makes you unique and interesting? Write them here!",
+        "What makes you unique and interesting? Write them here!"
+      ],
+      "images": [
+        "assets/679f48f3705b461d.jpg",
+        "assets/75a1b4e4e9e58bef.jpg",
+        "assets/92995155bfa4ba08.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "My Projects",
+        "N  E  X  T",
+        "What can you say about your projects? Share it here!"
+      ],
+      "images": [
+        "assets/5ce1eeb01fd6ebd8.jpg",
+        "assets/ca9ff625d035ee79.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "My Skills",
+        "N  E  X  T",
+        "What do you do during your free time? Write them here!",
+        "What do you do during your free time? Write them here!",
+        "What do you do during your free time? Write them here!",
+        "What do you do during your free time? Write them here!",
+        "What do you do during your free time? Write them here!",
+        "What do you do during your free time? Write them here!"
+      ],
+      "images": [
+        "assets/83f6fbb242d22c6c.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "Meet Our Team",
+        "N  E  X  T",
+        "NAME SURNAME",
+        "NAME SURNAME",
+        "NAME SURNAME",
+        "Title",
+        "Title",
+        "Title"
+      ],
+      "images": [
+        "assets/78a00b96c1ddfa89.jpg",
+        "assets/81ed80248fab5e69.jpg",
+        "assets/93eafe1bb6cc281d.jpg"
+      ],
+      "icons": []
+    }
+  ]
+}

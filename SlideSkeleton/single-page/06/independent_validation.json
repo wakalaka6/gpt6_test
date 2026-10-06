@@ -1,0 +1,143 @@
+{
+  "id": "06",
+  "pptx_pages": 5,
+  "pdf_pages": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "human_source_page": 1,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 2,
+      "generated_shape_count": 1,
+      "generated_shapes": [
+        {
+          "name": "generated_1_perimeter frame",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 2,
+      "human_source_page": 6,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 5,
+      "generated_shape_count": 3,
+      "generated_shapes": [
+        {
+          "name": "generated_1_title accent",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_2_column divider",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_3_section divider",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 3,
+      "human_source_page": 7,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 10,
+      "generated_shape_count": 7,
+      "generated_shapes": [
+        {
+          "name": "generated_1_timeline connector",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_2_timeline station 1",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_3_timeline marker 1",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_4_timeline station 2",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_5_timeline marker 2",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_6_timeline station 3",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_7_timeline marker 3",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 4,
+      "human_source_page": 10,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 3,
+      "generated_shape_count": 2,
+      "generated_shapes": [
+        {
+          "name": "generated_1_project heading underline",
+          "shape_type": 1
+        },
+        {
+          "name": "generated_2_neon display frame",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 5,
+      "human_source_page": 14,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 7,
+      "generated_shape_count": 1,
+      "generated_shapes": [
+        {
+          "name": "generated_1_team heading rule",
+          "shape_type": 1
+        }
+      ]
+    }
+  ],
+  "content_passed": true,
+  "all_bounds_passed": true,
+  "visual_review_by_parent": {
+    "performed": true,
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "visible_clipping_or_unintended_overlap": false,
+    "comparison_observation": "AI 能组合较多霓虹 icon，并保持深蓝底和荧光配色，文字大小较易阅读；人类更擅长把 icon 融入标题框和人物光环。AI 多将 icon 作为独立装饰，风格保留但整体融合较弱。原始 icon 中已有的 OPEN/CLOSED 等文字未修改。"
+  },
+  "human_pdf": "/home/wangfeifei/projects/DeepSlides/outputs/content_style_template_benchmark/06/human/rendered_with_fonts/presentation.pdf"
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Retro neon newsletter aesthetic, vivid accents and expressive typography.",
+  "palette": [
+    "C4FFFC",
+    "172364",
+    "5CFFF7",
+    "FF8DE7",
+    "FFF200",
+    "FF85EA",
+    "FFD700"
+  ],
+  "font_families": [
+    "Nunito",
+    "Parisienne",
+    "Nunito Light",
+    "Arial"
+  ]
+}

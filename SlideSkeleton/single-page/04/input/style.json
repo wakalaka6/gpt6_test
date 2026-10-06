@@ -1,0 +1,15 @@
+{
+  "description": "Minimal pink and gray aesthetic, delicate accents and calm typography.",
+  "palette": [
+    "000000",
+    "FFFFFF",
+    "555555",
+    "737373",
+    "F5BFCC"
+  ],
+  "font_families": [
+    "ABeeZee",
+    "League Spartan ExtraBold",
+    "League Spartan"
+  ]
+}

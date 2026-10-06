@@ -1,0 +1,17 @@
+{
+  "description": "Playful hand-drawn doodles with red, blue and yellow accents.",
+  "palette": [
+    "000000",
+    "FFFFFF",
+    "E03E26",
+    "F2D925",
+    "434343",
+    "2843FF",
+    "F48723"
+  ],
+  "font_families": [
+    "DM Sans",
+    "Didact Gothic",
+    "Montserrat"
+  ]
+}

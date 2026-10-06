@@ -1,0 +1,17 @@
+{
+  "description": "Bold contrasting colors, energetic geometric graphics and strong typography.",
+  "palette": [
+    "08090A",
+    "000000",
+    "4B88A2",
+    "F7EBEC",
+    "F5D547",
+    "FF4F4F",
+    "191919"
+  ],
+  "font_families": [
+    "Roboto",
+    "Odibee Sans",
+    "Roboto Medium"
+  ]
+}

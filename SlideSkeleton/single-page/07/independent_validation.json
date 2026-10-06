@@ -1,0 +1,122 @@
+{
+  "id": "07",
+  "pptx_pages": 5,
+  "pdf_pages": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "human_source_page": 1,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 1,
+      "generated_shape_count": 0,
+      "generated_shapes": []
+    },
+    {
+      "sample_id": 2,
+      "human_source_page": 3,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 3,
+      "generated_shape_count": 1,
+      "generated_shapes": [
+        {
+          "name": "Rectangle 1",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 3,
+      "human_source_page": 9,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 5,
+      "generated_shape_count": 3,
+      "generated_shapes": [
+        {
+          "name": "Rectangle 4",
+          "shape_type": 1
+        },
+        {
+          "name": "Rectangle 6",
+          "shape_type": 1
+        },
+        {
+          "name": "Rectangle 8",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 4,
+      "human_source_page": 13,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 1,
+      "generated_shape_count": 1,
+      "generated_shapes": [
+        {
+          "name": "Rectangle 4",
+          "shape_type": 1
+        }
+      ]
+    },
+    {
+      "sample_id": 5,
+      "human_source_page": 19,
+      "text_multiset_matches": true,
+      "missing_text": {},
+      "extra_text": {},
+      "missing_image_bytes": [],
+      "out_of_bounds_shapes": [],
+      "editable_text_blocks": 11,
+      "generated_shape_count": 4,
+      "generated_shapes": [
+        {
+          "name": "Rectangle 7",
+          "shape_type": 1
+        },
+        {
+          "name": "Rectangle 11",
+          "shape_type": 1
+        },
+        {
+          "name": "Rectangle 15",
+          "shape_type": 1
+        },
+        {
+          "name": "Rectangle 19",
+          "shape_type": 1
+        }
+      ]
+    }
+  ],
+  "content_passed": true,
+  "all_bounds_passed": true,
+  "visual_review_by_parent": {
+    "performed": true,
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "visible_clipping_or_unintended_overlap": false,
+    "comparison_observation": "AI 能把花卉边角、花环和照片组织成完整页面，奶油白与绿色保持自然风格，照片更大；人类更常使用深绿底和克制的小图，整体气氛不同。AI 保留了输入的 ‹#› 页码占位符，原页渲染为实际页码，这属于输入协议差异。"
+  },
+  "human_pdf": "/home/wangfeifei/projects/DeepSlides/outputs/content_style_template_benchmark/07/human/rendered_with_fonts/presentation.pdf"
+}

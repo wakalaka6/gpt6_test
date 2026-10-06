@@ -1,0 +1,104 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "Newsletter",
+        "RETRO\nPOSTING SIGNS"
+      ],
+      "images": [
+        "assets/351cae192e569aac.png",
+        "assets/4dc57406656d83de.png",
+        "assets/5d02bd31047636b3.png",
+        "assets/6ede348c3852b1a5.png",
+        "assets/72a1ba89bd501645.png",
+        "assets/760d52728be771dd.png",
+        "assets/b36b847cdcd1c1b2.png",
+        "assets/e4e96eafef919c7a.png",
+        "assets/eac1eb85a617e488.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "Briefly elaborate on\nwhat you want to discuss. ",
+        "Briefly elaborate on\nwhat you want to discuss. ",
+        "OUR\nCOMPANY",
+        "What we do?",
+        "Who we are?"
+      ],
+      "images": [
+        "assets/4d2518f2f4a069a5.png",
+        "assets/57374e0cc0e40f41.png",
+        "assets/b366f169bc4b509e.png",
+        "assets/e9588e428eccebf0.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "2021",
+        "2022",
+        "2023",
+        "ADD A TIMELINE PAGE",
+        "Add a\nmain point",
+        "Add a\nmain point",
+        "Add a\nmain point",
+        "Briefly elaborate on what you\nwant to discuss. ",
+        "Briefly elaborate on what you\nwant to discuss. ",
+        "Briefly elaborate on what you\nwant to discuss. "
+      ],
+      "images": [
+        "assets/760d52728be771dd.png",
+        "assets/8c04214c553b1e56.png",
+        "assets/b85b655b0ba24819.png",
+        "assets/e17bd64f119b0016.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "Presentations are communication tools that can be used as demonstrations, lectures, speeches, reports, and more. It is mostly presented before an audience. It serves a variety of purposes, making presentations powerful tools for convincing and teaching.",
+        "YEAR: 2022\nROLE: WRITE YOUR ROLE",
+        "YOUR PROJECT"
+      ],
+      "images": [
+        "assets/0de859fed85b9d7f.png",
+        "assets/1307b044e7807e87.png",
+        "assets/20d46c6dcf3a7077.png",
+        "assets/38225c72e9ec40ce.png",
+        "assets/655e5df27739b4b1.png",
+        "assets/8dbf828f96ff5ff6.png",
+        "assets/d4bbe27cb08f0691.png",
+        "assets/f4b6bbff7b079dc5.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "Name",
+        "Name",
+        "Name",
+        "OUR TEAM",
+        "TItle or Position",
+        "TItle or Position",
+        "TItle or Position"
+      ],
+      "images": [
+        "assets/351cae192e569aac.png",
+        "assets/3ee0defc2101ac63.png",
+        "assets/900ff2a111d334c8.png",
+        "assets/a570ba061cc2991c.png",
+        "assets/a6215a60544a3798.png",
+        "assets/cfae6f42bad015f4.png",
+        "assets/fe9b024216b4f4d5.png"
+      ],
+      "icons": []
+    }
+  ]
+}

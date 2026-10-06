@@ -1,0 +1,85 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "CAREER DAY",
+        "TECH THEME FOR ",
+        "TECHNOLOGY PRESENTATIONS"
+      ],
+      "images": [],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "Enter your grand \nvision statement!",
+        "Enter your grand \nvision statement!",
+        "MISSION",
+        "VISION"
+      ],
+      "images": [
+        "assets/78c7030a13b1d6fc.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "WRITE YOUR IDEA"
+      ],
+      "images": [
+        "assets/303684db9007ef38.jpg",
+        "assets/7b95ae98124ca1b8.jpg",
+        "assets/81039a83f0f75837.jpg",
+        "assets/ad410b5aa5baac6f.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        " NAME",
+        " NAME",
+        " NAME",
+        " NAME",
+        "ADD A TEAM MEMBERS PAGE",
+        "Elaborate on what you \nwant to discuss. ",
+        "Title or Position",
+        "Title or Position",
+        "Title or Position",
+        "Title or Position"
+      ],
+      "images": [
+        "assets/3a01fccfc52cd706.jpg",
+        "assets/b6d94b9986ad773b.jpg",
+        "assets/ca7af32d01d62b39.jpg",
+        "assets/fa48d495a7108bf7.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "WRITE YOUR TOPIC OR IDEA"
+      ],
+      "images": [
+        "assets/577f2574826655a7.png",
+        "assets/d507902c895e2ffc.png",
+        "assets/f0253cad2ffe79aa.png"
+      ],
+      "icons": []
+    }
+  ]
+}

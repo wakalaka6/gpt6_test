@@ -1,0 +1,79 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "PITCH DECK",
+        "VIDEO PRESENTATION"
+      ],
+      "images": [
+        "assets/9e51bc563568e4e5.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "WRITE YOUR TOPIC OR IDEA"
+      ],
+      "images": [
+        "assets/61b825e5849a1797.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "Businesses Struggle with Outdated Methods",
+        "Inefficient Processes Hinder Growth and Profitability",
+        "Lack of access to affordable products",
+        "PROBLEM 1",
+        "PROBLEM 2",
+        "PROBLEM 3",
+        "PROBLEMS"
+      ],
+      "images": [
+        "assets/39279bc49adb1dc2.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "2010",
+        "2020",
+        "2030",
+        "Finalizing branding guidelines and developing marketing strategy.",
+        "Launching the first product and reaching 1 million customers.",
+        "Participated in major industry conference and hosted exclusive product launch event."
+      ],
+      "images": [
+        "assets/232166f5c66cf321.jpg",
+        "assets/95b0530b84cf36e8.jpg",
+        "assets/ff6fbc4058dac1de.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "Aaron Loeb - CEO",
+        "Our team consists of Aaron Loeb who is our CEO and has over 20 years of experience in the industry, and Francois Mercer who leads our development team and has a PhD in Computer Science",
+        "Sarah Mercer - CMO",
+        "TEAM MEMBERS"
+      ],
+      "images": [
+        "assets/955a3b3b03eee351.png",
+        "assets/b2b257f67bc77993.png"
+      ],
+      "icons": []
+    }
+  ]
+}

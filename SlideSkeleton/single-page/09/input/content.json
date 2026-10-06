@@ -1,0 +1,102 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "Elegant",
+        "Minimal Branding Kit "
+      ],
+      "images": [
+        "assets/eb445272647923d3.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "?",
+        "Company",
+        "Logo",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis. Fusce id lacus auctor, luctus nisi quis, aliquet eros. In hac habitasse platea dictumst. \n",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis. Fusce id lacus auctor, luctus nisi quis, aliquet eros. In hac habitasse platea dictumst. \n",
+        "Our",
+        "What we do? ",
+        "Who we are?"
+      ],
+      "images": [
+        "assets/c8f2f8d473ce7afb.jpg",
+        "assets/fac1d8ff4403eabb.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "2019",
+        "2021",
+        "2023",
+        "Add a main point",
+        "Add a main point",
+        "Add a main point",
+        "History",
+        "Logo",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis.",
+        "— "
+      ],
+      "images": [
+        "assets/ee1aeb771158e971.jpg",
+        "assets/fc8ee121c7450f55.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "CEO",
+        "CTO",
+        "Creative Director",
+        "Etta Roche",
+        "John Doe",
+        "Kevin Bates",
+        "Logo",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl vitae leo tincidunt mattis. Fusce id lacus auctor, luctus nisi quis, aliquet eros. In hac habitasse platea dictumst. ",
+        "Marketing",
+        "Our",
+        "Petra Flores",
+        "Team"
+      ],
+      "images": [
+        "assets/5ef2430bfca7b3b0.jpg",
+        "assets/5f0f078052ca48a0.jpg",
+        "assets/b6f6dbf40dbe5706.jpg",
+        "assets/ebab50d5669e17f9.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "Imagery",
+        "Logo",
+        "Lorem ipsum dolor sit amet, ",
+        "Lorem ipsum dolor sit amet, ",
+        "Lorem ipsum dolor sit amet, ",
+        "Lorem ipsum dolor sit amet, ",
+        "Photo",
+        "Photo",
+        "Photo",
+        "Photo"
+      ],
+      "images": [
+        "assets/1dfd8ab4709c5295.jpg",
+        "assets/54971bfd5cb09e85.jpg",
+        "assets/5a5dcc42cec4ef72.jpg",
+        "assets/7990f761b4612ca6.jpg"
+      ],
+      "icons": []
+    }
+  ]
+}

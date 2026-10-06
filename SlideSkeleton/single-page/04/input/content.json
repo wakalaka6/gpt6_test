@@ -1,0 +1,93 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "CV",
+        "beauty vlogger"
+      ],
+      "images": [
+        "assets/8f7713b14a764ba6.jpg",
+        "assets/b1275bd6b4afe40b.jpg",
+        "assets/b1e5ee42300dfc93.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "Au Naturale",
+        "Glitter Everywhere",
+        "Glitter is no longer just for special occasions – it's for every day! From glittery eyeshadow to sparkly highlighter, this trend is all about adding some sparkle to your look. Don't be afraid to shine!",
+        "Neon Lips",
+        "Neon lips are taking over for 2030! This trend is all about bright, bold colors that pop. Whether you prefer hot pinks or electric oranges, there's a neon shade for everyone.",
+        "The 'no-makeup' makeup trend is here to stay for 2030! This trend is all about enhancing your natural beauty with a few subtle touches. Think sheer lip tints, light coverage foundation, and a touch of bronzer for a sun-kissed glow.",
+        "current trends."
+      ],
+      "images": [
+        "assets/68556271f5f5e3a4.jpg",
+        "assets/9fd38d0d190a484c.jpg",
+        "assets/fdc2c5c260b659c6.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "01.",
+        "02.",
+        "03.",
+        "04.",
+        "Content Creation",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "Photography",
+        "SMM",
+        "Skincare",
+        "skills."
+      ],
+      "images": [
+        "assets/05642e1536f497e6.png",
+        "assets/a9655c9022b43d8d.jpg",
+        "assets/c7183ae5ee3d5964.jpg",
+        "assets/e56f8a9e21509d6d.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "2025-2027",
+        "2027-2028",
+        "2028-present",
+        "Borcelle, \nSocial Media Manager",
+        "Giggling Platypus Co., Brand Ambassador",
+        "Thynk Unlimited, \nBeauty Vlogger",
+        "experience."
+      ],
+      "images": [
+        "assets/2dbe01a890f7c1ab.jpg",
+        "assets/7482521cc73f0d8c.jpg",
+        "assets/cf12e5869a010bd4.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "What can you say about your projects? Share it here!",
+        "gallery image."
+      ],
+      "images": [
+        "assets/0f04349a0b292c77.jpg",
+        "assets/256ffb97f2d0eafa.jpg",
+        "assets/83895906235a6ca1.jpg",
+        "assets/adc489c35e98a997.jpg"
+      ],
+      "icons": []
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "page_count": 5,
+  "pages": [
+    {
+      "sample_id": 1,
+      "text_blocks": [
+        "GRAPHIC DESIGN",
+        "HISTORY OF"
+      ],
+      "images": [],
+      "icons": []
+    },
+    {
+      "sample_id": 2,
+      "text_blocks": [
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "Briefly elaborate on what you want to discuss. ",
+        "RENAISSANCE DESIGN: \nART MEETS SCIENCE",
+        "conclusion",
+        "contact",
+        "contemporary",
+        "introduction",
+        "modernism"
+      ],
+      "images": [
+        "assets/7ec0761f7e5b3510.jpg",
+        "assets/a84a3a1b9767b241.jpg",
+        "assets/b4ab0ee1819663be.jpg",
+        "assets/debabbbfadcf0d4b.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 3,
+      "text_blocks": [
+        "ART NOUVEAU",
+        "CONSTRUCTIVISM",
+        "DE STIJL AND MONDRIAN’S INFLUENCE",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "Elaborate on what you want to discuss. ",
+        "INDUSTRIAL REVOLUTION AND MODERNISM",
+        "MODERN GRAPHIC DESIGN",
+        "conclusion",
+        "contact",
+        "contemporary",
+        "introduction",
+        "modernism"
+      ],
+      "images": [
+        "assets/11f02ffbb66102de.jpg"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 4,
+      "text_blocks": [
+        "GALLERY IMAGE",
+        "What can you say about your projects? Share it here!",
+        "conclusion",
+        "contact",
+        "contemporary",
+        "introduction",
+        "modernism"
+      ],
+      "images": [
+        "assets/06ff5d99d958671f.png",
+        "assets/8f6119cc366456cd.png",
+        "assets/9a711d455c6ef65e.png",
+        "assets/e1f49c4972468fcb.png"
+      ],
+      "icons": []
+    },
+    {
+      "sample_id": 5,
+      "text_blocks": [
+        "1990s",
+        "2000s",
+        "2020s",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "ADD A MAIN POINT",
+        "Presentation are communication tools that can be used as demonstrations, lectures, reports, and more.",
+        "Presentation are communication tools that can be used as demonstrations, lectures, reports, and more.",
+        "Presentation are communication tools that can be used as demonstrations, lectures, reports, and more.",
+        "TIMELINE",
+        "conclusion",
+        "contact",
+        "contemporary",
+        "introduction",
+        "modernism"
+      ],
+      "images": [],
+      "icons": []
+    }
+  ]
+}
